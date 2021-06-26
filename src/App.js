@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { Einspannung } from "Bearings/Einspannung";
+import { Overview } from "Overview/Overview";
+import React, { useEffect, useRef, useState } from "react";
+import { saveSvg } from "util/saveSVG";
 
+const useStyles = makeStyles({
+  image: {
+    color: "red",
+  },
+});
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const classes = useStyles();
+
+  return <Overview />;
 }
 
 export default App;
